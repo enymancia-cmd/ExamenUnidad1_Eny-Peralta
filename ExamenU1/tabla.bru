@@ -1,0 +1,20 @@
+meta {
+  name: tabla
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5207/api/matematicas/tabla/5?hasta=12
+  body: json
+  auth: inherit
+}
+
+params:query {
+  hasta: 12
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

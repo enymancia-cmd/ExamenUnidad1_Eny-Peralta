@@ -1,0 +1,22 @@
+meta {
+  name: contraseña
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5207/api/seguridad/validar-password
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  "password": "MiPass_word2!"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

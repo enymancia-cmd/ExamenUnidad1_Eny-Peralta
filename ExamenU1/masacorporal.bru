@@ -1,0 +1,30 @@
+meta {
+  name: masacorporal
+  type: http
+  seq: 1
+}
+
+get {
+  url: hhttps://localhost:5207/api/Indicadores/calcular-imc?pesoKg=70&estaturaM=1.75
+  body: json
+  auth: inherit
+}
+
+params:query {
+  pesoKg: 70
+  estaturaM: 1.75
+}
+
+body:json {
+  {
+    "peso": 70,
+    "altura": 1.75,
+    "imc": 22.86,
+    "clasificacion": "Normal"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
